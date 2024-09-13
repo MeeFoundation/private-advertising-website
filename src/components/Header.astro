@@ -1,0 +1,83 @@
+---
+import Logo from "./Logo.astro";
+import { ButtonLink } from "mee-components";
+import { github, discord } from "./../../astro.config.mjs";
+export interface Props {
+  logoColor?: "blue" | "white";
+}
+
+const { logoColor = "blue" } = Astro.props;
+const links = [
+  {
+    name: "About us",
+    link: "https://mee.foundation/",
+    target: "_blank",
+  },
+  {
+    name: "Docs",
+    link: "/docs",
+  },
+];
+---
+
+<header
+  id="header"
+  class="flex w-screen flex-col items-center justify-center py-10"
+>
+  <div
+    class="header mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between px-5"
+  >
+    <div class="md:w-1/3">
+      <a
+        id="mainLogo"
+        href="/"
+        class:list={[
+          "logo block h-6 w-20",
+          { "logo--contrast": logoColor === "blue" },
+        ]}
+      >
+        <Logo />
+      </a>
+    </div>
+    <ul
+      class="items-right flex justify-center gap-3 text-center md:w-1/3 md:gap-8"
+    >
+      {
+        links.map((link) => (
+          <li class="text-base font-semibold text-brand-950/80">
+            <a href={link.link} target={link.target}>
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="hidden w-1/3 items-end justify-end gap-3 md:flex">
+      <ButtonLink
+        leftIcon="github text-lg"
+        buttonType="tertiary"
+        style="outlined"
+        size="l"
+        href={github}
+        target="_blank">Star us</ButtonLink
+      >
+      <ButtonLink
+        href={discord}
+        leftIcon="discord text-lg"
+        buttonType="tertiary"
+        style="outlined"
+        size="l"
+        target="_blank">Join us</ButtonLink
+      >
+    </div>
+  </div>
+</header>
+
+<style>
+  a:hover {
+    text-decoration: underline;
+  }
+  .header {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+</style>
