@@ -1,7 +1,7 @@
 ---
 import Logo from "./Logo.astro";
 import { ButtonLink } from "mee-components";
-import { github, discord } from "./../../astro.config.mjs";
+import { github, discord, meeFoundation } from "./../../astro.config.mjs";
 export interface Props {
   logoColor?: "blue" | "white";
 }
@@ -10,7 +10,7 @@ const { logoColor = "blue" } = Astro.props;
 const links = [
   {
     name: "About us",
-    link: "https://mee.foundation/",
+    link: meeFoundation,
     target: "_blank",
   },
   {
@@ -30,7 +30,7 @@ const links = [
     <div class="md:w-1/3">
       <a
         id="mainLogo"
-        href="/"
+        href={meeFoundation}
         class:list={[
           "logo block h-6 w-20",
           { "logo--contrast": logoColor === "blue" },
