@@ -20,12 +20,9 @@ const links = [
 ];
 ---
 
-<header
-  id="header"
-  class="flex w-screen flex-col items-center justify-center py-10"
->
+<header id="header" class="flex w-screen flex-col items-center justify-center relative">
   <div
-    class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between px-5"
+    class="header mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between p-5"
   >
     <div class="md:w-1/3">
       <a
@@ -76,5 +73,20 @@ const links = [
 <style>
   a:hover {
     text-decoration: underline;
+  }
+  .header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(231, 232, 233) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 </style>
