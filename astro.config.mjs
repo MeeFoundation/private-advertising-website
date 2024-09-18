@@ -48,17 +48,16 @@ export default defineConfig({
           label: "For Users",
           items: [
             {
-              label: "Start Here",
-              items: [
-                {
-                  label: "Getting Started",
-                  link: "docs/users/getting-started",
-                },
-              ],
+              label: "Private Advertising",
+              autogenerate: { directory: "docs/users/private-advertising" },
             },
             {
-              label: "Core Concepts",
-              autogenerate: { directory: "docs/users/basics" },
+              label: "Mee Extension",
+              autogenerate: { directory: "docs/users/mee-extension" },
+            },
+            {
+              label: "Other Things",
+              autogenerate: { directory: "docs/users/other-things" },
             },
           ],
         },
@@ -66,13 +65,24 @@ export default defineConfig({
           label: "For Developers",
           items: [
             {
-              label: "Start Here",
-              items: [
-                {
-                  label: "Getting Started",
-                  link: "docs/developers/getting-started",
-                },
-              ],
+              label: "Private Advertising",
+              autogenerate: {
+                directory: "docs/developers/private-advertising",
+              },
+            },
+            {
+              label: "Mee Interest Server",
+              autogenerate: {
+                directory: "docs/developers/mee-interest-server",
+              },
+            },
+            {
+              label: "Mee Extension",
+              autogenerate: { directory: "docs/developers/mee-extension" },
+            },
+            {
+              label: "Other Things",
+              autogenerate: { directory: "docs/developers/other-things" },
             },
           ],
         },
