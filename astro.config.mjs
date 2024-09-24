@@ -24,9 +24,13 @@ export default defineConfig({
     mode: "standalone",
   }),
   site: site,
+  redirects: {
+    "/docs": "/docs/users/private-advertising",
+  },
   integrations: [
     starlight({
       ...sharedConfig,
+      disable404Route: true,
       logo: {
         light: "/src/assets/logo-light.svg",
         dark: "/src/assets/logo-dark.svg",
@@ -48,16 +52,33 @@ export default defineConfig({
           label: "For Users",
           items: [
             {
-              label: "Private Advertising",
+              label: "Common",
               autogenerate: { directory: "docs/users/private-advertising" },
             },
             {
               label: "Mee Extension",
               autogenerate: { directory: "docs/users/mee-extension" },
             },
+          ],
+        },
+        {
+          label: "For Providers",
+          items: [
             {
-              label: "Other Things",
-              autogenerate: { directory: "docs/users/other-things" },
+              label: "Common",
+              autogenerate: {
+                directory: "docs/providers/private-advertising",
+              },
+            },
+            {
+              label: "Mee Interest Server",
+              autogenerate: {
+                directory: "docs/providers/mee-interest-server",
+              },
+            },
+            {
+              label: "Mee Extension",
+              autogenerate: { directory: "docs/providers/mee-extension" },
             },
           ],
         },
@@ -65,7 +86,7 @@ export default defineConfig({
           label: "For Developers",
           items: [
             {
-              label: "Private Advertising",
+              label: "Common",
               autogenerate: {
                 directory: "docs/developers/private-advertising",
               },
@@ -79,10 +100,6 @@ export default defineConfig({
             {
               label: "Mee Extension",
               autogenerate: { directory: "docs/developers/mee-extension" },
-            },
-            {
-              label: "Other Things",
-              autogenerate: { directory: "docs/developers/other-things" },
             },
           ],
         },
