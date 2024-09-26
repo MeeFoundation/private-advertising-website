@@ -24,9 +24,6 @@ export default defineConfig({
     mode: "standalone",
   }),
   site: site,
-  redirects: {
-    "/docs": "/docs/users/private-advertising",
-  },
   integrations: [
     starlight({
       ...sharedConfig,
