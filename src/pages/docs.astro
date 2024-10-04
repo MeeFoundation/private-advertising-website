@@ -1,3 +1,97 @@
 ---
-return Astro.redirect('/docs/users/private-advertising');
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import usersImage from "../../public/images/docs/users.png";
+import providersImage from "../../public/images/docs/providers.png";
+import developersImage from "../../public/images/docs/developers.png";
+
+const categories = [
+  {
+    image: usersImage,
+    title: "Users",
+    description:
+      "We are a nonprofit with a mission to offer the Mee human-centered user experience for the internet.",
+    linkTitle: "View docs for users",
+    link: "docs/users/private-advertising",
+  },
+  {
+    image: providersImage,
+    title: "Providers",
+    description:
+      "We are a nonprofit with a mission to offer the Mee human-centered user experience for the internet.",
+    linkTitle: "View docs for providers",
+    link: "docs/providers/private-advertising",
+  },
+  {
+    image: developersImage,
+    title: "Developers",
+    description:
+      "We are a nonprofit with a mission to offer the Mee human-centered user experience for the internet.",
+    linkTitle: "View docs for developers",
+    link: "docs/developers/private-advertising",
+  },
+];
 ---
+
+<Layout title="Docs">
+  <main class="">
+    <article
+      class="relative flex h-full min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden"
+    >
+      <Header type="docs" activePage="docs" />
+      <section
+        class="section top-0 z-100 mb-3.5 flex h-full w-screen items-center justify-center"
+      >
+        <div
+          class="flex max-w-150 flex-col items-center justify-center gap-6 px-6 transition-opacity duration-500 md:p-0"
+        >
+          <div class="overflow-hidden">
+            <h1
+              class="marker animate-riseIn text-center text-4xl font-semibold text-gray-900 lg:text-7xl lg:tracking-0.02"
+            >
+              Your Mee Docs
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex h-auto max-w-7xl flex-col items-center justify-center bg-white"
+      >
+        <div class="overflow-hidden">
+          <div class="animate-riseIn">
+            <div class="flex gap-8 p-8">
+              {
+                categories.map((category) => (
+                  <a
+                    class="rounded-2xl border border-grey-300 pb-8"
+                    href={category.link}
+                  >
+                    <img
+                      src={category.image.src}
+                      class="w-full"
+                      alt={`${category.title} Docs`}
+                    />
+                    <div class="flex flex-col gap-2 p-8 pb-4 pt-0">
+                      <div class="flex items-center gap-2 text-left text-xl font-semibold text-grey-900 lg:text-2xl">
+                        {category.title}
+                      </div>
+                      <div class="text-sm text-grey-800 lg:text-base">
+                        {category.description}
+                      </div>
+                    </div>
+                    <p class="flex cursor-pointer items-center gap-2.5 px-8 py-0.5 text-brand-700">
+                      <span class="underline">{category.linkTitle}</span>
+                      <i class="bi bi-arrow-right" />
+                    </p>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+      <div><Footer mode="dark" /></div>
+    </article>
+  </main>
+</Layout>

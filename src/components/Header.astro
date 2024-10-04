@@ -3,40 +3,43 @@ import Logo from "./Logo.astro";
 import ButtonLink from "./ButtonLink.astro";
 import { github, discord, meeFoundation } from "./../../astro.config.mjs";
 export interface Props {
-  logoColor?: "blue" | "white";
+  className?: string;
+  type?: "default" | "docs";
+  activePage?: string;
 }
 
-const { logoColor = "blue" } = Astro.props;
+const { className, activePage, type = "default" } = Astro.props;
 const links = [
   {
     name: "About us",
     link: meeFoundation,
     target: "_blank",
+    id: "about-us",
   },
   {
     name: "Docs",
     link: "/docs",
-    target: "_blank",
+    id: "docs",
   },
 ];
 ---
 
 <header
   id="header"
-  class="relative flex w-screen flex-col items-center justify-center"
+  class:list={[
+    "relative flex w-screen flex-col items-center justify-center",
+    type === "docs" && "border-b border-grey-200",
+  ]}
 >
   <div
-    class="header mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between px-5 py-8"
+    class:list={[
+      "header mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between px-5 py-8",
+      type === "default" && "after-border",
+      className,
+    ]}
   >
     <div class="md:w-1/3">
-      <a
-        id="mainLogo"
-        href={meeFoundation}
-        class:list={[
-          "logo block h-6 w-20",
-          { "logo--contrast": logoColor === "blue" },
-        ]}
-      >
+      <a id="mainLogo" href="/" class="logo block h-6 w-20">
         <Logo />
       </a>
     </div>
@@ -46,7 +49,14 @@ const links = [
       {
         links.map((link) => (
           <li class="text-base font-semibold text-brand-950/80">
-            <a href={link.link} target={link.target}>
+            <a
+              href={link.link}
+              target={link.target}
+              class:list={[
+                "hover:text-brand-950",
+                activePage === link.id && "text-brand-950",
+              ]}
+            >
               {link.name}
             </a>
           </li>
@@ -78,7 +88,7 @@ const links = [
   a:hover {
     text-decoration: underline;
   }
-  .header:after {
+  .after-border:after {
     content: "";
     position: absolute;
     bottom: 0;

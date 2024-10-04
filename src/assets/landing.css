@@ -1,21 +1,31 @@
-@import './fonts.css';
-
-:root,::backdrop {
+:root,
+::backdrop {
   --purple-hsl: 255, 60%, 60%;
   --overlay-blurple: hsla(var(--purple-hsl), 0.2);
-  --sl-mee-accent: #4F868E;
+  --sl-mee-accent: #4f868e;
+  --sl-nav-height: auto !important;
+  --sl-color-bg-nav: black;
+  --sl-color-bg-sidebar: black;
+  --sl-color-text-accent: white;
+  --sl-color-hairline-shade: --color-grey-200;
 }
 
-:root[data-theme='light'] {
+:root[data-theme="light"] {
   --purple-hsl: 255, 85%, 65%;
+  --sl-color-bg-nav: white;
+  --sl-color-bg-sidebar: white;
+  --sl-color-text-accent: black !important;
+}
+
+html[data-theme="dark"] {
+  background-color: black;
 }
 
 [data-has-hero] .page {
-  background: linear-gradient(215deg, var(--overlay-blurple), transparent 40%),
-    radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh /
-      105vw 200vh,
-    radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50%
-      calc(100% + 20rem) / 60rem 30rem;
+  background:
+    linear-gradient(215deg, var(--overlay-blurple), transparent 40%),
+    radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,
+    radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem;
 }
 
 [data-has-hero] header {
@@ -25,15 +35,121 @@
   backdrop-filter: blur(16px);
 }
 
-[data-has-hero] .hero > img {
+[data-has-hero] .hero>img {
   filter: drop-shadow(0 0 3rem var(--overlay-blurple));
 }
 
-:root[data-theme='light'],
-[data-theme='light'] ::backdrop {
+:root[data-theme="light"],
+[data-theme="light"] ::backdrop {
   --sl-color-text-accent: var(--sl-mee-accent);
 }
 
 :root {
   --sl-font: public-sans;
+}
+
+site-search button[aria-label="Search"] {
+  @apply !border !border-solid !rounded-2xl !border-grey-300 !ps-3 !pe-2 !text-[var(--sl-color-gray-2)] !w-full !text-sm !max-w-80 mx-auto !h-9;
+}
+
+site-search button[aria-label="Search"] span {
+  @apply block;
+}
+
+starlight-theme-select label {
+  --sl-label-icon-size: 0.875rem;
+  --sl-caret-size: 1.25rem;
+  --sl-inline-padding: 0.5rem;
+  @apply relative flex items-center gap-1 text-[var(--sl-color-gray-1)];
+}
+
+starlight-theme-select select {
+  border: 0;
+  padding-block: 0.625rem;
+  padding-inline: calc(var(--sl-label-icon-size) + 0.25rem) calc(var(--sl-caret-size) + 0.25rem);
+  width: var(--sl-select-width);
+  background-color: transparent;
+  text-overflow: ellipsis;
+  color: inherit;
+  cursor: pointer;
+  appearance: none;
+}
+
+.right-sidebar {
+  @apply relative border-s-0;
+}
+
+mobile-starlight-toc nav {
+  @apply relative start-0 border-t-0 border-l border-r;
+}
+
+starlight-toc li {
+  position: relative;
+}
+
+starlight-toc a {
+  @apply text-sm font-normal hover:bg-gray-100 !text-brand-950;
+  --pad-inline: 1rem;
+  border-radius: 0;
+  padding-block: 0.5rem;
+}
+
+starlight-toc a[aria-current="true"] {
+  @apply text-sm font-semibold hover:bg-transparent;
+}
+
+starlight-toc a::before {
+  @apply w-px absolute bottom-0 h-full bg-[var(--sl-color-hairline)] -left-0 content-[''];
+}
+
+starlight-toc h2 {
+  @apply text-base font-semibold !mb-4;
+}
+
+starlight-toc a:hover::before,
+starlight-toc a:focus::before {
+  @apply bg-gray-300;
+}
+
+starlight-toc a[aria-current="true"]::before,
+starlight-toc a[aria-current="true"]:hover::before,
+starlight-toc a[aria-current="true"]:focus::before {
+  @apply bg-[var(--sl-mee-accent)];
+}
+
+
+nav.sidebar {
+  @apply relative;
+}
+
+nav.sidebar .sidebar-pane {
+  @apply absolute top-0 left-0 h-[80vh] border-e-0;
+}
+
+.main-frame .main-pane {
+  @apply border-l border-[var(--sl-color-hairline-shade)] border-t-0;
+}
+
+starlight-menu-button button {
+  @apply absolute flex items-center justify-center -top-[46px] shadow-none border border-solid border-grey-300;
+}
+
+starlight-menu-button[aria-expanded="true"] button {
+  @apply !bg-grey-100 border-grey-400;
+}
+
+/* starlight-menu-button button {
+  @apply relative flex items-center justify-center shadow-none border border-solid border-grey-300 m-0 start-0 top-0.5;
+} */
+
+.content-panel h1 {
+  @apply text-3xl md:text-5xl font-semibold
+}
+
+starlight-theme-select {
+  @apply !hidden;
+}
+
+.right-sidebar-panel {
+  @apply mt-5
 }

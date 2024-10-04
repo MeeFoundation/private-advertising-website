@@ -1,1 +1,8 @@
 @import "mee-components/base-theme";
+
+.logo > svg {
+  fill: #447f88;
+  transition: all;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
