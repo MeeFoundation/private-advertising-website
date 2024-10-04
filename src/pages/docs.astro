@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import usersImage from "../../public/images/docs/users.png";
@@ -37,14 +36,14 @@ const categories = [
 <Layout title="Docs">
   <main class="">
     <article
-      class="relative flex h-full min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden"
+      class="relative flex h-full min-h-screen w-screen flex-col items-center justify-between gap-2 md:gap-8 overflow-hidden"
     >
       <Header type="docs" activePage="docs" />
       <section
-        class="section top-0 z-100 mb-3.5 flex h-full w-screen items-center justify-center"
+        class="section top-0 z-100 flex h-full w-screen items-center justify-center"
       >
         <div
-          class="flex max-w-150 flex-col items-center justify-center gap-6 px-6 transition-opacity duration-500 md:p-0"
+          class="flex max-w-192 flex-col items-center justify-center gap-2 px-6 transition-opacity duration-500 md:p-0"
         >
           <div class="overflow-hidden">
             <h1
@@ -53,18 +52,27 @@ const categories = [
               Your Mee Docs
             </h1>
           </div>
+          <section class="overflow-hidden">
+            <h3
+              class="text animation-delay-800 animate-riseIn px-6 text-center text-xl leading-relaxed text-gray-900 md:text-2xl"
+            >
+              Everything you need to build a stellar documentation website. Fast,
+              accessible, and easy-to-use.
+            </h3>
+          </section>
         </div>
       </section>
+      
       <section
         class="flex h-auto max-w-7xl flex-col items-center justify-center bg-white"
       >
         <div class="overflow-hidden">
           <div class="animate-riseIn">
-            <div class="flex gap-8 p-8">
+            <div class="flex gap-8 p-8 flex-wrap items-center justify-center">
               {
                 categories.map((category) => (
                   <a
-                    class="rounded-2xl border border-grey-300 pb-8"
+                    class="rounded-2xl border border-grey-300 pb-8 max-w-96"
                     href={category.link}
                   >
                     <img
@@ -91,7 +99,6 @@ const categories = [
           </div>
         </div>
       </section>
-      <div><Footer mode="dark" /></div>
     </article>
   </main>
 </Layout>
