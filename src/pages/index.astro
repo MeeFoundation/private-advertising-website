@@ -39,18 +39,22 @@ const services = [
   {
     image: "/images/services/extension.svg",
     title: "Mee Extension",
+    link: "https://meextension.org/",
+    target: "_blank",
     description:
       " Working in conjunction with a Mee-compatible advertising network implements private advertising.",
   },
   {
     image: "/images/services/interest-service.svg",
     title: "Interests Service",
+    link: "/docs/users/mee-extension/#interest-service",
     description:
       " Based on your browsing history, which never leaves your computer, a set of anonymous interests is generated.",
   },
   {
     image: "/images/services/ad-network.svg",
     title: "Private Ad Network",
+    link: "/docs/users/private-advertising/#private-advertising-project",
     description:
       "Mee-authorized ad networks tailor the ads based on your interests so you can enjoy relevant content and privacy-first principles.",
   },
@@ -64,7 +68,7 @@ const services = [
       class="relative mt-27 flex h-full w-screen flex-col items-center justify-between gap-8 overflow-hidden md:gap-16"
     >
       <section
-        class="section top-0 z-100 flex h-full w-screen items-center justify-center mt-10 md:mt-20"
+        class="section top-0 z-100 mt-10 flex h-full w-screen items-center justify-center md:mt-20"
       >
         <div
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
@@ -93,13 +97,13 @@ const services = [
         <div class="overflow-hidden">
           <div class="animate-riseIn">
             <div
-              class="flex max-w-96 flex-wrap items-center justify-center gap-8 md:grid md:max-w-max md:grid-cols-2 lg:grid-cols-3 "
+              class="flex max-w-96 flex-wrap items-center justify-center gap-8 md:grid md:max-w-max md:grid-cols-2 lg:grid-cols-3"
             >
               {
                 futures.map((future) => (
                   <div
                     class:list={[
-                      "rounded-2xl border border-grey-300 max-h-110.5",
+                      "max-h-110.5 rounded-2xl border border-grey-300",
                       future.class,
                     ]}
                   >
@@ -150,11 +154,11 @@ const services = [
         class="platform relative flex max-w-7xl flex-col items-center px-6 text-grey-900"
       >
         <div
-          class="flex w-full flex-col items-center justify-center gap-10 lg:gap-20 lg:flex-row lg:items-start mb-24"
+          class="mb-24 flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:gap-20"
         >
           {
             services.map((service) => (
-              <div class="flex max-w-100 flex-col items-center justify-center gap-6 text-center">
+              <a class="flex max-w-100 flex-col items-center justify-center gap-6 text-center" href={service.link} target={service.target}>
                 <span class="flex items-center justify-center text-base uppercase">
                   <img src={service.image} />
                 </span>
@@ -162,7 +166,7 @@ const services = [
                   <h6 class="text-2xl font-semibold">{service.title}</h6>
                   <p class="text-base font-normal">{service.description}</p>
                 </div>
-              </div>
+              </a>
             ))
           }
         </div>
