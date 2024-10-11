@@ -17,6 +17,77 @@ export const sharedConfig = {
     replacesTitle: true,
   },
 };
+
+export const header = {
+  links: [
+    {
+      name: "About us",
+      link: meeFoundation,
+      target: "_blank",
+      id: "about-us",
+    },
+    {
+      name: "Docs",
+      link: "/docs",
+      id: "docs",
+    },
+  ],
+  rightLinks: [
+    {
+      name: "Join us",
+      link: discord,
+      icon: "discord",
+      target: "_blank",
+      id: "discord",
+    },
+  ],
+  footerLinks: [
+    {
+      link: meeFoundation,
+      name: "About",
+      target: "_blank",
+      id: "about",
+    },
+    {
+      link: "/docs/",
+      name: "Docs",
+      target: "_blank",
+      id: "docs",
+    },
+  ],
+};
+
+export const footer = {
+  links: [
+    {
+      link: "https://x.com/mee_foundation",
+      icon: "twitter-x",
+      target: "_blank",
+    },
+    {
+      link: github,
+      icon: "github",
+      target: "_blank",
+    },
+    {
+      link: discord,
+      icon: "discord",
+      target: "_blank",
+    },
+  ],
+  rightLinks: [
+    {
+      link: meeFoundation,
+      name: "About",
+      target: "_blank",
+    },
+    {
+      link: "/docs/",
+      name: "Docs",
+      target: "_blank",
+    },
+  ],
+};
 // https://astro.build/config
 export default defineConfig({
   output: "static",
@@ -108,11 +179,15 @@ export default defineConfig({
         },
       ],
       components: {
-        Sidebar: "./src/components/starlight/Sidebar.astro",
-        EditLink: "./src/components/starlight/EditLink.astro",
-        Header: "./src/components/starlight/DocsHead.astro",
-        PageFrame: "./src/components/starlight/PageFrame.astro",
-        Footer: "./src/components/starlight/Footer.astro",
+        Sidebar:
+          "./node_modules/mee-components/src/components/starlight/Sidebar.astro",
+        EditLink:
+          "./node_modules/mee-components/src/components/starlight/EditLink.astro",
+        PageFrame:
+          "./node_modules/mee-components/src/components/starlight/PageFrame.astro",
+        Footer:
+          "./node_modules/mee-components/src/components/starlight/Footer.astro",
+        Header: "./src/components/DocsHead.astro",
       },
     }),
     tailwind(),

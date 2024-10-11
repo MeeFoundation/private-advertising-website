@@ -1,0 +1,10 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import { DocsHeader } from "mee-components/starlight";
+import { Header } from "mee-components";
+import { header } from "../../astro.config.mjs";
+---
+
+<DocsHeader {...Astro.props}
+  ><Header activePage="docs" type="docs" header={header} /></DocsHeader
+>
