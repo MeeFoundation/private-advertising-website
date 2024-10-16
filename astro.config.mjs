@@ -19,11 +19,11 @@ export const sharedConfig = {
 };
 
 export const header = {
+  logoLink: meeFoundation,
   links: [
     {
       name: "About us",
-      link: meeFoundation,
-      target: "_blank",
+      link: `${meeFoundation}about/`,
       id: "about-us",
     },
     {
@@ -43,15 +43,13 @@ export const header = {
   ],
   footerLinks: [
     {
-      link: meeFoundation,
+      link: `${meeFoundation}about/`,
       name: "About",
-      target: "_blank",
       id: "about",
     },
     {
       link: "/docs/",
       name: "Docs",
-      target: "_blank",
       id: "docs",
     },
   ],
@@ -77,14 +75,12 @@ export const footer = {
   ],
   rightLinks: [
     {
-      link: meeFoundation,
+      link: `${meeFoundation}about/`,
       name: "About",
-      target: "_blank",
     },
     {
       link: "/docs/",
       name: "Docs",
-      target: "_blank",
     },
   ],
 };
