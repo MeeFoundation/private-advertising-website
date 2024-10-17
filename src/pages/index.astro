@@ -2,38 +2,38 @@
 import Layout from "@layouts/Layout.astro";
 import { Header, Footer } from "mee-components";
 import { header, footer } from "../../astro.config.mjs";
-import autofiil from "../../public/images/autofiil.svg";
-import completePrivacy from "../../public/images/complete-privacy.svg";
-import empoveredData from "../../public/images/empovered-data.svg";
-import yourData from "../../public/images/your-data.svg";
+// import autofiil from "../../public/images/autofiil.svg";
+// import completePrivacy from "../../public/images/complete-privacy.svg";
+// import empoveredData from "../../public/images/empovered-data.svg";
+// import yourData from "../../public/images/your-data.svg";
 
-const futures = [
-  {
-    image: autofiil,
-    title: "Seamless form-free experience",
-    description: "You don’t have to fill in forms–passwords, names and more",
-    class: "col-span-2",
-  },
-  {
-    image: yourData,
-    title: "Your data, your terms",
-    description: "Your data is never shared or sold by anyone",
-    class: "col-span-1",
-  },
-  {
-    image: empoveredData,
-    title: "Empowered data control",
-    description: "Your legal right to control your own data is enforced",
-    class: "col-span-1",
-  },
-  {
-    image: completePrivacy,
-    title: "Complete privacy, zero tracking",
-    description:
-      "Your activities remain private–no more tracking or spying on you",
-    class: "col-span-2",
-  },
-];
+// const futures = [
+//   {
+//     image: autofiil,
+//     title: "Seamless form-free experience",
+//     description: "You don’t have to fill in forms–passwords, names and more",
+//     class: "col-span-2",
+//   },
+//   {
+//     image: yourData,
+//     title: "Your data, your terms",
+//     description: "Your data is never shared or sold by anyone",
+//     class: "col-span-1",
+//   },
+//   {
+//     image: empoveredData,
+//     title: "Empowered data control",
+//     description: "Your legal right to control your own data is enforced",
+//     class: "col-span-1",
+//   },
+//   {
+//     image: completePrivacy,
+//     title: "Complete privacy, zero tracking",
+//     description:
+//       "Your activities remain private–no more tracking or spying on you",
+//     class: "col-span-2",
+//   },
+// ];
 
 const services = [
   {
@@ -66,7 +66,7 @@ const services = [
     <article
       class="relative mt-27 flex h-full w-screen flex-col items-center justify-between gap-8 overflow-hidden md:gap-16"
     >
-      <section
+      <!-- <section
         class="section top-0 z-100 mt-10 flex h-full w-screen items-center justify-center md:mt-20"
       >
         <div
@@ -125,9 +125,9 @@ const services = [
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section
-        class="section top-0 z-100 flex h-full w-screen items-center justify-center pt-12"
+        class="section top-0 z-100 flex h-full w-screen items-center justify-center pt-12 mt-10 md:mt-20"
       >
         <div
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
@@ -147,6 +147,14 @@ const services = [
               front-end component and back-end services
             </h3>
           </section>
+          <div class="overflow-hidden">
+            <a
+              class="text animation-delay-800 animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 md:text-2xl underline"
+              href="/docs"
+            >
+              Private Advertising Docs <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </section>
       <section
