@@ -5,4 +5,5 @@
   transition: all;
   transition-duration: 200ms;
   transition-timing-function: linear;
+  width: 100%;
 }
