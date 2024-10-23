@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { Header, Footer, Breadcrumbs } from "mee-components";
-import { header, footer, meeFoundation } from "../../astro.config.mjs";
+import { Header, Footer } from "mee-components";
+import { header, footer } from "../../astro.config.mjs";
 // import autofiil from "../../public/images/autofiil.svg";
 // import completePrivacy from "../../public/images/complete-privacy.svg";
 // import empoveredData from "../../public/images/empovered-data.svg";
@@ -127,15 +127,8 @@ const services = [
         </div>
       </section> -->
       <section
-        class="section top-0 z-100 flex h-full w-screen flex-col items-center justify-center gap-4 pt-16"
+        class="section top-0 z-100 flex h-full w-screen flex-col items-center justify-center pt-16 md:pt-25"
       >
-        <Breadcrumbs
-          className="hidden md:flex"
-          breadcrumbs={[
-            { title: "Projects", link: `${meeFoundation}projects/` },
-            { title: "Private Advertising" },
-          ]}
-        />
         <div
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
         >
