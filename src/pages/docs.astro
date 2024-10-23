@@ -1,8 +1,8 @@
 ---
 import { Header } from "mee-components";
-import { header } from "../../astro.config.mjs";
+import { header, meeFoundation } from "../../astro.config.mjs";
 import Layout from "../layouts/Layout.astro";
-import { DocsComponent } from "mee-components";
+import { DocsComponent, Breadcrumbs } from "mee-components";
 const data = {
   users: {
     enabled: true,
@@ -21,11 +21,19 @@ const data = {
 
 <Layout title="Docs">
   <main class="">
+    <Header header={header} activePage="docs" location="Private Advertision" />
     <article
-      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-2 overflow-hidden md:gap-16"
+      class="relative mt-27 flex h-full min-h-screen w-screen flex-col items-center gap-4 overflow-hidden pt-16"
     >
-      <Header header={header} activePage="docs" />
-      <DocsComponent data={data} title="Private Advertising Docs"/>
+      <Breadcrumbs
+        className="hidden md:flex"
+        breadcrumbs={[
+          { title: "Projects", link: `${meeFoundation}projects/` },
+          { title: "Private Advertising", link: `/` },
+          { title: "Docs" },
+        ]}
+      />
+      <DocsComponent data={data} title="Private Advertising Docs" />
     </article>
   </main>
 </Layout>

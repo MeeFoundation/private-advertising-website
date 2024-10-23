@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { Header, Footer } from "mee-components";
-import { header, footer } from "../../astro.config.mjs";
+import { Header, Footer, Breadcrumbs } from "mee-components";
+import { header, footer, meeFoundation } from "../../astro.config.mjs";
 // import autofiil from "../../public/images/autofiil.svg";
 // import completePrivacy from "../../public/images/complete-privacy.svg";
 // import empoveredData from "../../public/images/empovered-data.svg";
@@ -61,7 +61,7 @@ const services = [
 ---
 
 <Layout title="Private Advertising">
-  <Header header={header} />
+  <Header header={header} location="Private Advertision" />
   <main class="w-screen overflow-hidden">
     <article
       class="relative mt-27 flex h-full w-screen flex-col items-center justify-between gap-8 overflow-hidden md:gap-16"
@@ -127,8 +127,15 @@ const services = [
         </div>
       </section> -->
       <section
-        class="section top-0 z-100 flex h-full w-screen items-center justify-center pt-12 mt-10 md:mt-20"
+        class="section top-0 z-100 flex h-full w-screen flex-col items-center justify-center gap-4 pt-16"
       >
+        <Breadcrumbs
+          className="hidden md:flex"
+          breadcrumbs={[
+            { title: "Projects", link: `${meeFoundation}projects/` },
+            { title: "Private Advertising" },
+          ]}
+        />
         <div
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
         >
@@ -149,7 +156,7 @@ const services = [
           </section>
           <div class="overflow-hidden">
             <a
-              class="text animation-delay-800 animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 md:text-2xl underline"
+              class="animation-delay-800 block w-full animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
               href="/docs"
             >
               Private Advertising Docs <i class="bi bi-arrow-right"></i>
