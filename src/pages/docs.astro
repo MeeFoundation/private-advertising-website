@@ -5,15 +5,24 @@ import Layout from "../layouts/Layout.astro";
 import { DocsComponent, Breadcrumbs } from "mee-components";
 const data = {
   users: {
+    title: "Users",
     enabled: true,
     link: "/docs/users/private-advertising",
+    description:
+      "Click below to learn more about our private advertising project.",
   },
-  providers: {
+  publishers: {
+    title: "Publishers",
+    description:
+      "Our goal is that publishers and small and medium sized businesses can increase their ad revenue by adding support for a new Mee-compatible ad network.",
     enabled: true,
-    link: "/docs/providers/private-advertising",
+    link: "/docs/publishers/private-advertising",
   },
   developers: {
+    title: "Developers",
     enabled: true,
+    description:
+      "Our development work on private advertising is its early stages. We will soon be reaching out to entrepreneurs and developers interested in developing a new Mee-compatible ad network.",
     link: "/docs/developers/private-advertising",
   },
 };

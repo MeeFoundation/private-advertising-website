@@ -154,23 +154,23 @@ export default defineConfig({
           ],
         },
         {
-          label: "Providers",
+          label: "Publishers",
           items: [
             {
               label: "Common",
               autogenerate: {
-                directory: "docs/providers/private-advertising",
+                directory: "docs/publishers/private-advertising",
               },
             },
             {
               label: "Mee Interest Server",
               autogenerate: {
-                directory: "docs/providers/mee-interest-server",
+                directory: "docs/publishers/mee-interest-server",
               },
             },
             {
               label: "Mee Extension",
-              autogenerate: { directory: "docs/providers/mee-extension" },
+              autogenerate: { directory: "docs/publishers/mee-extension" },
             },
           ],
         },

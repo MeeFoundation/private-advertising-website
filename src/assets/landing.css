@@ -6,7 +6,6 @@
   --sl-nav-height: auto !important;
   --sl-color-bg-nav: black;
   --sl-color-bg-sidebar: black;
-  --sl-color-text-accent: white;
   --sl-color-hairline-shade: --color-grey-200;
 }
 
@@ -14,7 +13,6 @@
   --purple-hsl: 255, 85%, 65%;
   --sl-color-bg-nav: white;
   --sl-color-bg-sidebar: white;
-  --sl-color-text-accent: black !important;
 }
 
 html[data-theme="dark"] {

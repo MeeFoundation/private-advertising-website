@@ -1,7 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { Header, Footer } from "mee-components";
+import { Header, Footer, DocsComponent } from "mee-components";
 import { header, footer } from "../../astro.config.mjs";
+import forYou from "../../public/images/for-you.svg";
 // import autofiil from "../../public/images/autofiil.svg";
 // import completePrivacy from "../../public/images/complete-privacy.svg";
 // import empoveredData from "../../public/images/empovered-data.svg";
@@ -35,27 +36,53 @@ import { header, footer } from "../../astro.config.mjs";
 //   },
 // ];
 
+const data = {
+  users: {
+    image: forYou,
+    enabled: true,
+    link: "https://meextension.org/",
+    title: "For You",
+    linkTitle: "Download Mee Extension",
+    description:
+      "To experience Mee private advertising, you install the Mee Extension in your browser. An early version of our extension is already available.",
+  },
+  publishers: {
+    title: "For Publishers",
+    description:
+      "Our goal is to increase publishers’ ad revenues. All the publisher has to do is add support for a new, Mee-compatible ad network that is currently under development.",
+    enabled: true,
+    link: "/docs/publishers/private-advertising",
+  },
+  developers: {
+    title: "For Developers",
+    enabled: true,
+    description:
+      "We’re developing the Mee Extension, an Interest Service and a Mee-compatible ad network. These work together to implement our vision for private advertising.",
+    link: "/docs/developers/private-advertising",
+  },
+};
+
 const services = [
   {
     image: "/images/services/extension.svg",
     title: "Mee Extension",
     link: "https://meextension.org/",
     description:
-      "A browser extension that enhances your privacy, opts you out of your data being shared/sold and matches ads to your interests.",
+      "Working in conjunction with a Mee-compatible advertising network implements private advertising.",
   },
   {
     image: "/images/services/interest-service.svg",
     title: "Interest Service",
     link: "/docs/users/mee-extension/#interest-service",
     description:
-      "The Mee Extension uploads your de-identified interests to an Interest Service hosted by the Mee Foundation. They are used to assign you to cohorts of anonymous people with similar interests."
+      "Based on your browsing history, which never leaves your computer, a set of anonymous interests is generated.",
   },
   {
     image: "/images/services/ad-network.svg",
     title: "Private Ad Network",
     link: "/docs/users/private-advertising/#private-advertising-project",
     description:
-      "Mee-authorized ad networks tailor the ads you see based on the cohorts you are in, so you can enjoy relevant content while preserving your privacy.",
+      "Mee-authorized ad networks tailor the ads based on your interests so you can enjoy relevant content and privacy-first principles.",
   },
 ];
 ---
@@ -64,10 +91,10 @@ const services = [
   <Header header={header} location="Private Advertising" />
   <main class="w-screen overflow-hidden">
     <article
-      class="relative mt-27 flex h-full w-screen flex-col items-center justify-between gap-8 overflow-hidden md:gap-16"
+      class="relative mt-27 flex h-full w-screen flex-col items-center justify-between gap-10 overflow-hidden md:gap-40"
     >
-      <!-- <section
-        class="section top-0 z-100 mt-10 flex h-full w-screen items-center justify-center md:mt-20"
+      <section
+        class="section top-0 z-100 mt-10 flex h-full w-screen flex-col items-center justify-center gap-10 md:mt-20 md:gap-20"
       >
         <div
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
@@ -79,55 +106,31 @@ const services = [
               Private Advertising
             </h1>
           </div>
-          <section class="overflow-hidden">
+          <!-- <section class="overflow-hidden">
             <h3
-              class="text animation-delay-800 animate-riseIn text-pretty px-6 text-center text-xl text-grey-900 md:text-2xl"
+              class="text animation-delay-800 max-w-3xl animate-riseIn text-pretty px-6 text-center text-xl text-grey-900 md:text-2xl"
             >
-              We’re a nonprofit whose mission is to develop Mee–a human-centered
-              user experience for the internet, offering more control, privacy
-              and convenience.
+              Everything you need to build a stellar documentation website.
+              Fast, accessible, and easy-to-use.
             </h3>
-          </section>
-        </div>
-      </section>
-      <section
-        class="flex h-auto max-w-7xl flex-col items-center justify-center px-6"
-      >
-        <div class="overflow-hidden">
-          <div class="animate-riseIn">
-            <div
-              class="flex max-w-96 flex-wrap items-center justify-center gap-8 md:grid md:max-w-max md:grid-cols-2 lg:grid-cols-3"
+          </section> -->
+          <div class="overflow-hidden">
+            <a
+              class="animation-delay-800 block w-full animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
+              href="/docs"
             >
-              {
-                futures.map((future) => (
-                  <div
-                    class:list={[
-                      "h-full rounded-2xl border border-grey-300",
-                      future.class,
-                    ]}
-                  >
-                    <img
-                      src={future.image.src}
-                      class="w-full"
-                      alt={`${future.title}`}
-                    />
-                    <div class="flex flex-col gap-2 p-8 pt-0">
-                      <div class="flex items-center gap-2 text-left text-xl font-semibold text-grey-900 lg:text-2xl">
-                        {future.title}
-                      </div>
-                      <div class="text-sm text-grey-800 lg:text-base">
-                        {future.description}
-                      </div>
-                    </div>
-                  </div>
-                ))
-              }
-            </div>
+              Private Advertising Docs <i class="bi bi-arrow-right"></i>
+            </a>
           </div>
         </div>
-      </section> -->
+        <section
+          class="z-100 flex h-full w-screen flex-col items-center justify-center"
+        >
+          <DocsComponent data={data} />
+        </section>
+      </section>
       <section
-        class="section top-0 z-100 flex h-full w-screen flex-col items-center justify-center pt-16 md:pt-25"
+        class="z-100 flex h-full w-screen flex-col items-center justify-center gap-10 md:gap-16 lg:gap-32"
       >
         <div
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
@@ -143,43 +146,37 @@ const services = [
             <h3
               class="text animation-delay-800 animate-riseIn text-pretty px-6 text-center text-xl leading-relaxed text-grey-900 md:text-2xl"
             >
-              Our goal: Enable internet advertising that is tailored to your interests while eliminating the need for surveillance by cookies and other tracking technologies.
+              Bringing the Mee experience to internet advertising, featuring a
+              front-end component and back-end services
             </h3>
           </section>
-          <div class="overflow-hidden">
-            <a
-              class="animation-delay-800 block w-full animate-riseIn px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
-              href="/docs"
-            >
-              Private Advertising Docs <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
         </div>
-      </section>
-      <section
-        class="platform relative flex max-w-7xl flex-col items-center px-6 text-grey-900"
-      >
-        <div
-          class="mb-24 flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:gap-20"
+        <section
+          class="platform relative flex max-w-7xl flex-col items-center px-6 text-grey-900"
         >
-          {
-            services.map((service) => (
-              <a
-                class="flex max-w-100 flex-col items-center justify-center gap-6 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-3-strong"
-                href={service.link}
-              >
-                <span class="flex items-center justify-center text-base uppercase">
-                  <img src={service.image} />
-                </span>
-                <div class="flex flex-col gap-4">
-                  <h6 class="text-2xl font-semibold">{service.title}</h6>
-                  <p class="text-base font-normal">{service.description}</p>
-                </div>
-              </a>
-            ))
-          }
-        </div>
+          <div
+            class="mb-24 flex w-full flex-col items-center justify-center gap-6 md:gap-10 lg:flex-row lg:items-start lg:gap-20"
+          >
+            {
+              services.map((service) => (
+                <a
+                  class="flex max-w-100 flex-col items-center justify-center gap-6 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-3-strong"
+                  href={service.link}
+                >
+                  <span class="flex items-center justify-center text-base uppercase">
+                    <img src={service.image} />
+                  </span>
+                  <div class="flex flex-col gap-4">
+                    <h6 class="text-2xl font-semibold">{service.title}</h6>
+                    <p class="text-base font-normal">{service.description}</p>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+        </section>
       </section>
+
       <Footer footer={footer} mode="dark" />
     </article>
   </main>
