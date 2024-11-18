@@ -127,7 +127,7 @@ nav.sidebar .sidebar-pane {
 }
 
 .main-frame .main-pane {
-  @apply border-l border-t-0 border-[var(--sl-color-hairline-shade)];
+  @apply border-l border-t-0 border-[var(--sl-color-hairline-shade)] dark:border-white/10;
 }
 
 starlight-menu-button button {
