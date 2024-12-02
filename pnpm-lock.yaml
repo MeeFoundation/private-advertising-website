@@ -39,8 +39,8 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3
       mee-components:
-        specifier: ^0.0.31
-        version: 0.0.31(@astrojs/starlight-tailwind@2.0.3(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@astrojs/tailwind@5.1.0(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.21.3)
+        specifier: ^0.0.34
+        version: 0.0.34(@astrojs/starlight-tailwind@2.0.3(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@astrojs/tailwind@5.1.0(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.21.3)
       queue-tick:
         specifier: ^1.0.1
         version: 1.0.1
@@ -2276,8 +2276,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mee-components@0.0.31:
-    resolution: {integrity: sha512-H3svh88VvLlU/l2I+eFFkfDI9b6cLxYnUTNd76flgEHm+WrSvs40KfD0MglzUyB300x0U600QNT6WC5zPuP5gQ==}
+  mee-components@0.0.34:
+    resolution: {integrity: sha512-5uwaWW1wlYfGxD4rYycNobcai4esINdVz/6sd1w0gBk5e+Hn7KfguLgaFSxNn0pNLonkDITN1ihqYI3NuxYeoQ==}
     peerDependencies:
       '@astrojs/starlight': ^0.27.1
       '@astrojs/starlight-tailwind': ^2.0.3
@@ -6353,7 +6353,7 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mee-components@0.0.31(@astrojs/starlight-tailwind@2.0.3(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@astrojs/tailwind@5.1.0(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.21.3):
+  mee-components@0.0.34(@astrojs/starlight-tailwind@2.0.3(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@astrojs/tailwind@5.1.0(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.27.1(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.21.3):
     dependencies:
       '@astrojs/check': 0.7.0(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)
       '@astrojs/node': 8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2))
