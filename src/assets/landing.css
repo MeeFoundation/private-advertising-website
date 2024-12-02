@@ -154,9 +154,9 @@ starlight-theme-select {
   @apply mt-5;
 }
 
-.main-frame ol,
-.main-frame ul,
-.main-frame menu {
+.main-frame .main-pane ol,
+.main-frame .main-pane ul,
+.main-frame .main-pane menu {
   list-style: disc;
   padding-left: 2rem;
   margin: auto;
