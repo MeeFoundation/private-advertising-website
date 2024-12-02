@@ -17,6 +17,7 @@
 
 html[data-theme="dark"] {
   background-color: black;
+  --sl-color-bg: transparent;
 }
 
 [data-has-hero] .page {
