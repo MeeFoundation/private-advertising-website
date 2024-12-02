@@ -57,7 +57,7 @@ const services = [
 
 <Layout title="Private Advertising">
   <Header header={header} location="Private Advertising" />
-  <main class="w-screen overflow-hidden">
+  <main class="w-screen overflow-hidden dark:bg-darky">
     <article
       class="relative mt-27 flex h-full w-screen flex-col items-center justify-between gap-10 overflow-hidden md:gap-40"
     >
@@ -68,25 +68,25 @@ const services = [
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
         >
           <h1
-            class="marker text-center text-4xl font-semibold text-grey-900 lg:text-7xl"
+            class="marker text-center text-4xl font-semibold text-grey-900 lg:text-7xl dark:text-white/90"
           >
             Private Advertising
           </h1>
           <h3
-            class="text animation-delay-800 max-w-3xl text-pretty px-6 text-center text-xl text-grey-900 md:text-2xl"
+            class="text animation-delay-800 max-w-3xl text-pretty px-6 text-center text-xl text-grey-900 md:text-2xl dark:text-white/90"
           >
             Everything you need to build a stellar documentation website. Fast,
             accessible, and easy-to-use.
           </h3>
           <a
-            class="animation-delay-800 block w-full px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl"
+            class="animation-delay-800 block w-full px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl dark:text-brand-300"
             href="/docs"
           >
             Private Advertising Docs <i class="bi bi-arrow-right"></i>
           </a>
         </div>
         <section
-          class="z-100 flex h-full w-screen flex-col items-center justify-center"
+          class="1 z-100 flex h-full w-screen flex-col items-center justify-center"
         >
           <DocsComponent data={data} />
         </section>
@@ -98,12 +98,12 @@ const services = [
           class="flex max-w-5xl flex-col items-center justify-center gap-4 px-6 transition-opacity duration-500"
         >
           <h1
-            class="marker text-center text-3xl font-semibold text-grey-900 lg:text-5xl lg:tracking-0.02"
+            class="marker text-center text-3xl font-semibold text-grey-900 lg:text-5xl lg:tracking-0.02 dark:text-gray-50"
           >
             Private Advertising Project
           </h1>
           <h3
-            class="text animation-delay-800 text-pretty px-6 text-center text-xl leading-relaxed text-grey-900 md:text-2xl"
+            class="text animation-delay-800 text-pretty px-6 text-center text-xl leading-relaxed text-grey-900 md:text-2xl dark:text-gray-50"
           >
             Bringing the Mee experience to internet advertising, featuring a
             front-end component and back-end services
@@ -124,8 +124,12 @@ const services = [
                     <img src={service.image} />
                   </span>
                   <div class="flex flex-col gap-4">
-                    <h6 class="text-2xl font-semibold">{service.title}</h6>
-                    <p class="text-base font-normal">{service.description}</p>
+                    <h6 class="text-2xl font-semibold dark:text-gray-50">
+                      {service.title}
+                    </h6>
+                    <p class="text-base font-normal dark:text-gray-200">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               ))
