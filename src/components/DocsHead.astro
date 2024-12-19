@@ -3,7 +3,7 @@ import type { Props } from "@astrojs/starlight/props";
 import { DocsHeader } from "mee-components/starlight";
 import { Header } from "mee-components";
 import { AstroError } from "astro/errors";
-import { header, meeFoundation } from "../../astro.config.mjs";
+import { header, meeFoundation } from "../config";
 
 const findIfIsCurrent = (
   entry: (typeof Astro.props.sidebar)[number],
