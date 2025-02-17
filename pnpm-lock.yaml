@@ -36,8 +36,8 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3
       mee-components:
-        specifier: ^0.0.52
-        version: 0.0.52(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1)
+        specifier: ^0.0.59
+        version: 0.0.59(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1)
       queue-tick:
         specifier: ^1.0.1
         version: 1.0.1
@@ -127,6 +127,9 @@ packages:
   '@astrojs/internal-helpers@0.4.2':
     resolution: {integrity: sha512-EdDWkC3JJVcpGpqJAU/5hSk2LKXyG3mNGkzGoAuyK+xoPHbaVdSuIWoN1QTnmK3N/gGfaaAfM8gO2KDCAW7S3w==}
 
+  '@astrojs/internal-helpers@0.5.1':
+    resolution: {integrity: sha512-M7rAge1n2+aOSxNvKUFa0u/KFn0W+sZy7EW91KOSERotm2Ti8qs+1K0xx3zbOxtAVrmJb5/J98eohVvvEqtNkw==}
+
   '@astrojs/language-server@2.15.4':
     resolution: {integrity: sha512-JivzASqTPR2bao9BWsSc/woPHH7OGSGc9aMxXL4U6egVTqBycB3ZHdBJPuOCVtcGLrzdWTosAqVPz1BVoxE0+A==}
     hasBin: true
@@ -148,10 +151,10 @@ packages:
     peerDependencies:
       astro: ^5.0.0
 
-  '@astrojs/node@9.0.0':
-    resolution: {integrity: sha512-3h/5kFZvpuo+chYAjj75YhtRUxfquxEJrpZRRC7TdiMGp2WhLp2us4VXm2mjezJp/zHKotW2L3qgp0P2ujQ0xw==}
+  '@astrojs/node@9.1.0':
+    resolution: {integrity: sha512-7fDsawWci/j4prDVVwOFGuArG+YK+io54/5ksKL+lbSZ8xA4h6TB36RA4INmNatralEOKlgCxmbZdwewYcsFWA==}
     peerDependencies:
-      astro: ^5.0.0
+      astro: ^5.3.0
 
   '@astrojs/prism@3.2.0':
     resolution: {integrity: sha512-GilTHKGCW6HMq7y3BUv9Ac7GMe/MO9gi9GW62GzKtth0SwukCu/qp2wLiGpEujhY+VVhaG9v7kv/5vFzvf4NYw==}
@@ -2451,8 +2454,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mee-components@0.0.52:
-    resolution: {integrity: sha512-nHqpp6evYm/iVB8mN8LPG2FzDeWhhaTF3/LUkLxUDMnaZK6YcSthZ/ZpYunu1O92Q9CDs68qubXeV06al7icKg==}
+  mee-components@0.0.59:
+    resolution: {integrity: sha512-ARmV6ydHdaEYBJWo1LgttBPoymNRYmUd+wag9RmMR/6kgGsZ86grKcS9jkRw0IasUw3tGhBXpxQrOZ8kVFhUtA==}
     peerDependencies:
       '@astrojs/starlight': ^0.30.3
       '@astrojs/starlight-tailwind': ^3.0.0
@@ -4046,6 +4049,8 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.2': {}
 
+  '@astrojs/internal-helpers@0.5.1': {}
+
   '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)':
     dependencies:
       '@astrojs/compiler': 2.10.3
@@ -4115,8 +4120,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.0(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))':
+  '@astrojs/node@9.1.0(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))':
     dependencies:
+      '@astrojs/internal-helpers': 0.5.1
       astro: 5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)
       send: 1.1.0
       server-destroy: 1.0.1
@@ -6804,10 +6810,10 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mee-components@0.0.52(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1):
+  mee-components@0.0.59(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1):
     dependencies:
       '@astrojs/check': 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)
-      '@astrojs/node': 9.0.0(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))
+      '@astrojs/node': 9.1.0(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))
       '@astrojs/starlight': 0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))
       '@astrojs/starlight-tailwind': 3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11)
       '@astrojs/tailwind': 5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11)
