@@ -36,8 +36,8 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3
       mee-components:
-        specifier: ^0.0.61
-        version: 0.0.61(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1)
+        specifier: ^0.0.62
+        version: 0.0.62(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1)
       queue-tick:
         specifier: ^1.0.1
         version: 1.0.1
@@ -127,8 +127,8 @@ packages:
   '@astrojs/internal-helpers@0.4.2':
     resolution: {integrity: sha512-EdDWkC3JJVcpGpqJAU/5hSk2LKXyG3mNGkzGoAuyK+xoPHbaVdSuIWoN1QTnmK3N/gGfaaAfM8gO2KDCAW7S3w==}
 
-  '@astrojs/internal-helpers@0.5.1':
-    resolution: {integrity: sha512-M7rAge1n2+aOSxNvKUFa0u/KFn0W+sZy7EW91KOSERotm2Ti8qs+1K0xx3zbOxtAVrmJb5/J98eohVvvEqtNkw==}
+  '@astrojs/internal-helpers@0.6.1':
+    resolution: {integrity: sha512-l5Pqf6uZu31aG+3Lv8nl/3s4DbUzdlxTWDof4pEpto6GUJNhhCbelVi9dEyurOVyqaelwmS9oSyOWOENSfgo9A==}
 
   '@astrojs/language-server@2.15.4':
     resolution: {integrity: sha512-JivzASqTPR2bao9BWsSc/woPHH7OGSGc9aMxXL4U6egVTqBycB3ZHdBJPuOCVtcGLrzdWTosAqVPz1BVoxE0+A==}
@@ -151,8 +151,8 @@ packages:
     peerDependencies:
       astro: ^5.0.0
 
-  '@astrojs/node@9.1.0':
-    resolution: {integrity: sha512-7fDsawWci/j4prDVVwOFGuArG+YK+io54/5ksKL+lbSZ8xA4h6TB36RA4INmNatralEOKlgCxmbZdwewYcsFWA==}
+  '@astrojs/node@9.1.3':
+    resolution: {integrity: sha512-YcVxEmeZU8khNdrPYNPN3j//4tYPM+Pw6CthAJ6VE/bw65qEX7ErMRApalY2tibc3YhCeHMmsO9rXGhyW0NNyA==}
     peerDependencies:
       astro: ^5.3.0
 
@@ -1567,10 +1567,6 @@ packages:
   destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==}
 
-  destroy@1.2.0:
-    resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
-    engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
-
   detect-indent@6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
     engines: {node: '>=8'}
@@ -1915,9 +1911,9 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  fresh@0.5.2:
-    resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
-    engines: {node: '>= 0.6'}
+  fresh@2.0.0:
+    resolution: {integrity: sha512-Rx/WycZ60HOaqLKAi6cHRKKI7zxWbJ31MhntmtwMoaTeF7XFH9hhBp8vITaMidfljRQ6eYWCKkaTK+ykVJHP2A==}
+    engines: {node: '>= 0.8'}
 
   fs-constants@1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
@@ -2415,8 +2411,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mee-components@0.0.61:
-    resolution: {integrity: sha512-uG9KFrDjqQT3myYx/m22AnwM6RRWujfZ7f7gtXh0Lrxfcb+1f2Ul8z94U5KMNb7pskb/wXNJHJfZsZ57jQU5Fg==}
+  mee-components@0.0.62:
+    resolution: {integrity: sha512-OrqscAwPpmSyfbSEXDBIQLV5W+Hv9zqSifIKqi4E5k45op7Pwic4GGut4pB96sTXuvFEK0TFEbQjtaAi0ejzjw==}
     peerDependencies:
       '@astrojs/starlight': ^0.30.3
       '@astrojs/starlight-tailwind': ^3.0.0
@@ -2542,12 +2538,12 @@ packages:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
-  mime-db@1.52.0:
-    resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
+  mime-db@1.54.0:
+    resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
     engines: {node: '>= 0.6'}
 
-  mime-types@2.1.35:
-    resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
+  mime-types@3.0.1:
+    resolution: {integrity: sha512-xRc4oEhT6eaBpU1XF7AjpOFD+xQmXNB5OVKwp4tqCuBpHLS/ZbBDrc07mYTDqVMg6PfxUjjNp85O6Cd2Z/5HWA==}
     engines: {node: '>= 0.6'}
 
   mime@3.0.0:
@@ -3227,8 +3223,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  send@1.1.0:
-    resolution: {integrity: sha512-v67WcEouB5GxbTWL/4NeToqcZiAWEq90N888fczVArY8A79J0L4FD7vj5hm3eUMua5EpoQ59wa/oovY6TLvRUA==}
+  send@1.2.0:
+    resolution: {integrity: sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw==}
     engines: {node: '>= 18'}
 
   server-destroy@1.0.1:
@@ -3955,7 +3951,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.2': {}
 
-  '@astrojs/internal-helpers@0.5.1': {}
+  '@astrojs/internal-helpers@0.6.1': {}
 
   '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)':
     dependencies:
@@ -4026,11 +4022,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.1.0(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))':
+  '@astrojs/node@9.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))':
     dependencies:
-      '@astrojs/internal-helpers': 0.5.1
+      '@astrojs/internal-helpers': 0.6.1
       astro: 5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)
-      send: 1.1.0
+      send: 1.2.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
       - supports-color
@@ -5520,8 +5516,6 @@ snapshots:
 
   destr@2.0.3: {}
 
-  destroy@1.2.0: {}
-
   detect-indent@6.1.0: {}
 
   detect-libc@1.0.3: {}
@@ -5924,7 +5918,7 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  fresh@0.5.2: {}
+  fresh@2.0.0: {}
 
   fs-constants@1.0.0: {}
 
@@ -6676,10 +6670,10 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mee-components@0.0.61(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1):
+  mee-components@0.0.62(@astrojs/starlight-tailwind@3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11))(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@rollup/rollup-darwin-arm64@4.21.3)(@rollup/rollup-linux-x64-gnu@4.21.3)(@types/node@22.5.4)(jiti@2.4.2)(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(rollup@4.28.1)(yaml@2.5.1):
     dependencies:
       '@astrojs/check': 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)
-      '@astrojs/node': 9.1.0(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))
+      '@astrojs/node': 9.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))
       '@astrojs/starlight': 0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))
       '@astrojs/starlight-tailwind': 3.0.0(@astrojs/starlight@0.30.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1)))(@astrojs/tailwind@5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11))(tailwindcss@3.4.11)
       '@astrojs/tailwind': 5.1.3(astro@5.1.0(@types/node@22.5.4)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.6.2)(yaml@2.5.1))(tailwindcss@3.4.11)
@@ -7012,11 +7006,11 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
-  mime-db@1.52.0: {}
+  mime-db@1.54.0: {}
 
-  mime-types@2.1.35:
+  mime-types@3.0.1:
     dependencies:
-      mime-db: 1.52.0
+      mime-db: 1.54.0
 
   mime@3.0.0: {}
 
@@ -7756,16 +7750,15 @@ snapshots:
 
   semver@7.6.3: {}
 
-  send@1.1.0:
+  send@1.2.0:
     dependencies:
       debug: 4.3.7
-      destroy: 1.2.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      fresh: 0.5.2
+      fresh: 2.0.0
       http-errors: 2.0.0
-      mime-types: 2.1.35
+      mime-types: 3.0.1
       ms: 2.1.3
       on-finished: 2.4.1
       range-parser: 1.2.1
