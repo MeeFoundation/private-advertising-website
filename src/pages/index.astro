@@ -72,12 +72,13 @@ const services = [
           >
             Private Advertising
           </h1>
-          <a
-            class="animation-delay-800 block w-full px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl dark:text-brand-300"
-            href="/docs"
+          <h3
+            class="text animation-delay-800 max-w-3xl text-pretty px-6 text-center text-xl text-grey-900 md:text-2xl dark:text-white/90"
           >
-            Private Advertising Docs <i class="bi bi-arrow-right"></i>
-          </a>
+            Our goal is to enable internet advertising that’s tailored to your
+            interests while eliminating the need for surveillance by cookies and
+            other tracking technologies.
+          </h3>
         </div>
         <section
           class="1 z-100 flex h-full w-screen flex-col items-center justify-center"
@@ -99,9 +100,14 @@ const services = [
           <h3
             class="text animation-delay-800 text-pretty px-6 text-center text-xl leading-relaxed text-grey-900 md:text-2xl dark:text-gray-50"
           >
-            Bringing the Mee experience to internet advertising, featuring a
-            front-end component and back-end services
+            Bringing a human-centered experience to internet advertising
           </h3>
+          <a
+            class="animation-delay-800 block w-full px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl dark:text-brand-300"
+            href="/docs"
+          >
+            Private Advertising Docs <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
         <section
           class="platform relative flex max-w-7xl flex-col items-center px-6 text-grey-900"
@@ -111,9 +117,7 @@ const services = [
           >
             {
               services.map((service) => (
-                <div
-                  class="flex max-w-100 flex-col items-center justify-center gap-6 rounded-xl p-6 text-center "
-                >
+                <div class="flex max-w-100 flex-col items-center justify-center gap-6 rounded-xl p-6 text-center">
                   <span class="flex items-center justify-center text-base uppercase">
                     <img src={service.image} />
                   </span>
