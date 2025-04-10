@@ -72,13 +72,13 @@ const services = [
           >
             Private Advertising
           </h1>
-          <h3
+          <h2
             class="text animation-delay-800 max-w-3xl text-pretty px-6 text-center text-xl text-grey-900 md:text-2xl dark:text-white/90"
           >
             Our goal is to enable internet advertising that’s tailored to your
             interests while eliminating the need for surveillance by cookies and
             other tracking technologies.
-          </h3>
+          </h2>
         </div>
         <section
           class="1 z-100 flex h-full w-screen flex-col items-center justify-center"
@@ -97,11 +97,11 @@ const services = [
           >
             Private Advertising Project
           </h1>
-          <h3
+          <h2
             class="text animation-delay-800 text-pretty px-6 text-center text-xl leading-relaxed text-grey-900 md:text-2xl dark:text-gray-50"
           >
             Bringing a human-centered experience to internet advertising
-          </h3>
+          </h2>
           <a
             class="animation-delay-800 block w-full px-6 text-center text-xl leading-relaxed text-brand-600 underline md:text-2xl dark:text-brand-300"
             href="/docs"
@@ -119,12 +119,12 @@ const services = [
               services.map((service) => (
                 <div class="flex max-w-100 flex-col items-center justify-center gap-6 rounded-xl p-6 text-center">
                   <span class="flex items-center justify-center text-base uppercase">
-                    <img src={service.image} />
+                    <img src={service.image} alt={service.title} />
                   </span>
                   <div class="flex flex-col gap-4">
-                    <h6 class="text-2xl font-semibold dark:text-gray-50">
+                    <h2 class="text-2xl font-semibold dark:text-gray-50">
                       {service.title}
-                    </h6>
+                    </h2>
                     <p class="text-base font-normal dark:text-gray-200">
                       {service.description}
                     </p>

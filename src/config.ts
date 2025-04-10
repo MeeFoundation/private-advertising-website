@@ -29,6 +29,7 @@ export const header = {
       icon: "discord",
       target: "_blank",
       id: "discord",
+      ariaLabel: "Discord",
     },
   ],
   footerLinks: [
@@ -50,16 +51,19 @@ export const footer = {
       link: "https://x.com/mee_foundation",
       icon: "twitter-x",
       target: "_blank",
+      ariaLabel: "X",
     },
     {
       link: github,
       icon: "github",
       target: "_blank",
+      ariaLabel: "Github",
     },
     {
       link: discord,
       icon: "discord",
       target: "_blank",
+      ariaLabel: "Discord",
     },
   ],
   rightLinks: [
